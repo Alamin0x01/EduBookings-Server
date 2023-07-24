@@ -129,7 +129,7 @@ async function run() {
       res.json(colleges);
     });
 
-    // Get popular colleges according to the average rating
+    // Get popular colleges according to the average rating-
 
     app.get("/popularcolleges", async (req, res) => {
       const colleges = await collegeCollection.find({}).toArray();
@@ -150,7 +150,7 @@ async function run() {
       res.json(collegesWithAverageRating);
     });
 
-    // Add admission to database
+    // Add admission to database -
     app.post("/admission", verifyJWT, async (req, res) => {
       const email = req.decoded.email;
       const admission = req.body;
