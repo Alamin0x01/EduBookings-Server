@@ -32,8 +32,7 @@ const verifyJWT = (req, res, next) => {
 };
 
 // MongoDB Connection
-
-const uri = `mongodb+srv://${process.env.DB_ID}:${process.env.DB_PASSWORD}@cluster0.uzgcvif.mongodb.net/?retryWrites=true&w=majority`;
+const uri = `mongodb+srv://${process.env.DB_ID}:${process.env.DB_PASSWORD}@cluster0.exyylxe.mongodb.net/?retryWrites=true&w=majority`;
 
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
 const client = new MongoClient(uri, {
@@ -49,19 +48,19 @@ async function run() {
     // Connect the client to the server	(optional starting in v4.7)
     // await client.connect();
     const collegeCollection = client
-      .db("campus-books-collection")
+      .db("EduBookings-collection")
       .collection("colleges");
     const graduateCollection = client
-      .db("campus-books-collection")
+      .db("EduBookings-collection")
       .collection("graduate");
     const userCollection = client
-      .db("campus-books-collection")
+      .db("EduBookings-collection")
       .collection("users");
     const researchCollection = client
-      .db("campus-books-collection")
+      .db("EduBookings-collection")
       .collection("research");
     const admissionCollection = client
-      .db("campus-books-collection")
+      .db("EduBookings-collection")
       .collection("admission");
 
     // Jwt Token
