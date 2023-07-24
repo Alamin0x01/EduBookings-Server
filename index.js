@@ -121,7 +121,7 @@ async function run() {
       res.json(college);
     });
 
-    // Get College by name (search)
+    // Get College by name (Search)
     app.get("/colleges/search/:name", async (req, res) => {
       const name = req.params.name;
       const query = { college_name: { $regex: name, $options: "i" } };
