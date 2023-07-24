@@ -189,7 +189,7 @@ async function run() {
       res.json(research);
     });
 
-    // Get all reviews of all colleges
+    // Get all reviews of all colleges-
     app.get("/reviews", async (req, res) => {
       const colleges = await collegeCollection.find({}).toArray();
       const reviewsWithCollegeName = colleges.reduce((allReviews, college) => {
