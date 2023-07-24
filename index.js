@@ -249,7 +249,7 @@ async function run() {
       res.json(user);
     });
 
-    // Update User by email
+    // Update User by email-
     app.patch("/user/:email", verifyJWT, async (req, res) => {
       const email = req.params.email;
       const decodedEmail = req.decoded.email;
