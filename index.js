@@ -177,13 +177,13 @@ async function run() {
       res.json(admissionData);
     });
 
-    // Get Graduates
+    // Get Graduates-
     app.get("/graduates", async (req, res) => {
       const graduates = await graduateCollection.find({}).toArray();
       res.json(graduates);
     });
 
-    // Get Research
+    // Get Research-
     app.get("/research", async (req, res) => {
       const research = await researchCollection.find({}).toArray();
       res.json(research);
