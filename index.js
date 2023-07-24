@@ -285,9 +285,9 @@ async function run() {
 run().catch(console.dir);
 
 app.get("/", (req, res) => {
-  res.send("Campus Books Server is running");
+  res.send("EduBookings Server is running");
 });
 
 app.listen(port, () => {
-  console.log(`Campus Books Server is running on port: ${port}`);
+  console.log(`EduBookings Server is running on port: ${port}`);
 });
